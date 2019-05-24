@@ -1,112 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blueworks Kanban</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
-      integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"
-    />
-    <link rel="stylesheet" href="src/css/BoardStyle.css" />
-    <link rel="stylesheet" href="src/css/MainStyle.css" />
-    <link rel="stylesheet" href="src/css/Navbar.css" />
-    <link
-      href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    />
-  </head>
 
-  <body>
-    <!-- Navbar start -->
-    <nav class="navbar navbar-expand-lg">
-      <button
-        type="button"
-        class="btn btn-custom-1"
-        data-toggle="modal"
-        data-target="#exampleModalLong"
-      >
-        |||
-      </button>
-      <a class="navbar-brand" href="https://www.blue.works/">blueworks</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="harvest-index.html"
-              >Harvest <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Kanban</a>
-          </li>
-        </ul>
-        <!-- Button trigger MS modal -->
-        <button
-          type="button"
-          class="btn btn-outline-primary my-2 my-sm-0"
-          id="SignIn"
-          onclick="signIn()"
-        >
-          Login
-        </button>
-        <img
-          src="src/img/Serdar Mustafa.jpg"
-          alt="userImg"
-          class="img-thumbnail"
-          id="img-thumbnail-user"
-        />
-      </div>
-    </nav>
-    <!-- Navbar End -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blueworks Kanban</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+    integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+  <link rel="stylesheet" href="src/css/BoardStyle.css" />
+  <link rel="stylesheet" href="src/css/MainStyle.css" />
+  <link rel="stylesheet" href="src/css/Navbar.css" />
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
+</head>
 
-    <!-- board headers -->
-    <div class="row">
-      <div class="board-column-header-new col-sm-2" id="backlog">Backlog</div>
-      <div class="board-column-header-new col-sm-2" id="planned">Planned</div>
-      <div class="board-column-header-new col-sm-2" id="inProgress">
-        In Progress
-      </div>
-      <div class="board-column-header-new col-sm-2" id="done">Done</div>
-      <div class="board-column-header-new col-sm-2" id="completed">
-        Completed
+<body>
+  <!-- Navbar start -->
+  <nav class="navbar navbar-expand-lg">
+    <button type="button" class="btn btn-custom-1" data-toggle="modal" data-target="#exampleModalLong">
+      |||
+    </button>
+    <a class="navbar-brand" href="https://www.blue.works/">blueworks</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Kanban</a>
+        </li>
+      </ul>
+      <!-- Button trigger MS modal -->
+      <button type="button" class="btn btn-outline-primary my-2 my-sm-0" id="SignIn" onclick="signIn()">
+        Login
+      </button>
+      <img src="src/img/Serdar Mustafa.jpg" alt="userImg" class="img-thumbnail" id="img-thumbnail-user" />
+    </div>
+  </nav>
+  <!-- Navbar End -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Settings</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul class="">
+            <li class="bucketsCheckboxes">
+              <h5>Buckets</h5>
+            </li>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" checked="checked" onClick="toggleBuckets(this)"
+                id="bucketCheckbox1" value="option1">
+              <label class="form-check-label" for="bucketCheckbox1">Backlog</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" checked="checked" onClick="toggleBuckets(this)"
+                id="bucketCheckbox2" value="option2">
+              <label class="form-check-label" for="bucketCheckbox2">Planned</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" checked="checked" onClick="toggleBuckets(this)"
+                id="bucketCheckbox3" value="option3">
+              <label class="form-check-label" for="bucketCheckbox3">In Progress</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" checked="checked" onClick="toggleBuckets(this)"
+                id="bucketCheckbox4" value="option4">
+              <label class="form-check-label" for="bucketCheckbox4">Done</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" onClick="toggleBuckets(this)" id="bucketCheckbox5"
+                value="option5">
+              <label class="form-check-label" for="bucketCheckbox5">Completed</label>
+            </div>
+            <hr>
+          </ul>
+          <ul class="">
+            <li class="projectCheckboxes">
+              <h5>Projects</h5>
+            </li>
+            <hr>
+            <ul class="">
+              <li class="userCheckboxes">
+                <h5>Users</h5>
+              </li>
+              <hr>
+            </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
-    <!-- main board -->
+  </div>
+  <!-- board headers -->
+  <div class="row">
+    <div class="board-column-header-new col-sm-2" id="backlog">Backlog</div>
+    <div class="board-column-header-new col-sm-2" id="planned">Planned</div>
+    <div class="board-column-header-new col-sm-2" id="inProgress">
+      In Progress
+    </div>
+    <div class="board-column-header-new col-sm-2" id="done">Done</div>
+    <div class="board-column-header-new col-sm-2" id="completed">
+      Completed
+    </div>
+  </div>
+  <!-- main board -->
+  <div class="user">
     <div class="board">
       <div class="board-column backlog col-sm-2">
         <div class="board-column-header">Backlog</div>
@@ -172,44 +185,46 @@
         <div class="board-column-header">Done</div>
         <div class="board-column-content">
           <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>11</div>
-          </div>
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>12</div>
-          </div>
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>13</div>
-          </div>
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>14</div>
-          </div>
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>15</div>
+            <div class="board-item-content"><span>Item #</span>11
+
+
+            </div>
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>12</div>
+            </div>
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>13</div>
+            </div>
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>14</div>
+            </div>
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>15</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="board-column completed col-sm-2">
-        <div class="board-column-header">Completed</div>
-        <div class="board-column-content">
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>11</div>
-          </div>
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>12</div>
-          </div>
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>13</div>
-          </div>
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>14</div>
-          </div>
-          <div class="board-item">
-            <div class="board-item-content"><span>Item #</span>15</div>
+        <div class="board-column completed col-sm-2">
+          <div class="board-column-header">Completed</div>
+          <div class="board-column-content">
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>11</div>
+            </div>
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>12</div>
+            </div>
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>13</div>
+            </div>
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>14</div>
+            </div>
+            <div class="board-item">
+              <div class="board-item-content"><span>Item #</span>15</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- main board -->
 
     <!--  End of main board -->
@@ -222,14 +237,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://secure.aadcdn.microsoftonline-p.com/lib/0.1.7/js/msal.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/dragula.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="src/js/models/MainBoard.js" type="text/javascript"></script>
-  </body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+    </script>
+    <script src="src/js/models/MainBoard.js"></script>
+    <script src="src/js/models/Filters.js"></script>
+    <script src="src/js/models/UserPhotos.js"></script>
+</body>
+
 </html>

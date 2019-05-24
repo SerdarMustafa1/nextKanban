@@ -7,6 +7,12 @@
     font-family: 'Slabo 27px', serif;
 }
 
+#SignIn {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #FEFEFEFF;
+}
+
 .navbar {
     background-color: #dee5ef;
     color: #3074b3;

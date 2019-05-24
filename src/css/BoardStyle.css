@@ -41,16 +41,24 @@
     }
 }
 
-.board-column-header-new {
+#backlog {
     background: #4A9FF9;
 }
 
-.board-column.inProgress .board-column-header-new {
+#planed {
     background: #f9944a;
 }
 
-.board-column.done .board-column-header-new {
+#inProgress {
     background: #2ac06d;
+}
+
+#done {
+    background: #3d05a5;
+}
+
+#completed {
+    background: #a51111;
 }
 
 .board-column-content {
@@ -63,6 +71,10 @@
     position: absolute;
     width: 100%;
     margin: 5px 0;
+}
+
+.board-item:hover {
+    border: solid red;
 }
 
 .board-item.muuri-item-releasing {
